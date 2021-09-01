@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main()
+{
+   int i,n, a, b,c;
+   float sinal,s;
+   printf("\n N: ");
+   scanf("%d",&n);
+   i=1;
+   a=4;
+   b=1;
+   c=2;
+   sinal=-1.0;
+   printf("\n\n S = ");
+   while (i<=n)
+   {   if (sinal>0) printf(" +%d/%d ",a,b);
+              else  printf(" -%d/%d ",a,b);
+       s=s+sinal*a/b;
+       a=(i+2)*(i+2);
+       b= b*c;
+       c++;
+       sinal = -sinal;
+       i++;
+
+   }
+   printf("\n\n A soma dos %d termos = %f\n", n, s);
+   return 0;
+}
+
+
+

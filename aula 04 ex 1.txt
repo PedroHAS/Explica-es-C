@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main()
+{int a,b,c,d,e,i,n;
+ float s,sinal;
+
+ printf("\n Entre com o numero de termos: ");
+ scanf("%d",&n);
+ a=16;
+ b=1;
+ s=0.0;
+ sinal=1.0;
+ i=1;
+ c=2;
+ d=3;
+ e=4;
+ printf("\n\n S= ");
+ while (i<=n)
+ { s= s+sinal*a/b;
+   if (sinal>0) printf("  + %d/%d",a,b);
+        else    printf("  - %d/%d",a,b);
+
+   a= (i+2)*(i+2)*(i+2)*(i+2);
+   b=b*c*d*e;
+   c=c+3;
+   d=d+3;
+   e=e+3;
+   if (i%2==0) sinal=-sinal;
+   i=i+1;
+ }
+ printf("\n\n");
+ printf("\n A soma dos %d termos = %f ",n,s);
+ return 0;
+}
